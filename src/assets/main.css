@@ -1,3 +1,38 @@
 @import './base.css';
 
+@font-face {
+    font-family: 'Now Black';
+    src: url(../assets/fonts/now.black.otf);
+}
+
+@font-face {
+    font-family: 'Now Medium';
+    src: url(../assets/fonts/now.medium.otf);
+}
+
+@font-face {
+    font-family: 'Now Regular';
+    src: url(../assets/fonts/now.regular.otf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+    background-color: #03A6C4;
+    color: white;
+    font-family: 'Now Medium';
+    font-size: 24px;
+}
+
+#head {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Now Black';
+    font-size: 52px;
+    text-shadow: 0 4px 4px 0 black;
+}
 

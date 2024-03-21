@@ -50,14 +50,22 @@ const inputs = ref(
 </script>
 
 <template>
+<body>
+    <section>
+        <img src="../assets/img/illu-indiv.png" alt="">
+    </section>
+    <section id="style-form">
+        <div id="head">
+        <h2>INDIVIDUEL</h2>
+        <RouterLink to="/">
+            <img src="../assets/img/cross-back.svg" alt="">
+        </RouterLink>
+        </div>
+        <form action="">
+            <Form :inputs="inputs" />
+        </form>
+    </section>
     
-<form action="">
-    <!-- !!! component formulaire -->
-    <Form :inputs="inputs" />
-    <!-- récupération de la variable inputs -->
-</form>
-
-<!-- test croix qui ferme -->
-<RouterLink to="/">X</RouterLink>
+</body>
 
 </template>

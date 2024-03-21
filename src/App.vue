@@ -14,3 +14,11 @@ import HelloWorld from './components/HelloWorld.vue'
 
   <RouterView />
 </template>
+
+<style scoped>
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

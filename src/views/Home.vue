@@ -1,3 +1,14 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
 <template>
-    <div>Page d'accueil</div>
+    <header>
+      <nav>
+        <RouterLink to="/individual">Individuel</RouterLink>
+        <RouterLink to="/group">Groupe</RouterLink>
+        <RouterLink to="/family">Famille</RouterLink>
+      </nav>
+  </header>
+
 </template>

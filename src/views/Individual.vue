@@ -1,8 +1,7 @@
 <script setup>
 
 // *** IMPORTS ***
-// !!! importer le formulaire
-// import Form from ''
+import Form from '../components/Form.vue'
 import { ref } from 'vue'
 
 // *** DATAS ***
@@ -54,7 +53,7 @@ const inputs = ref(
     
 <form action="">
     <!-- !!! component formulaire -->
-    <!-- <Form :inputs="inputs" /> -->
+    <Form :inputs="inputs" />
     <!-- récupération de la variable inputs -->
 </form>
 

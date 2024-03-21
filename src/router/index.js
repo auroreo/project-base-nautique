@@ -23,7 +23,7 @@ const router = createRouter({
       component: Group
     },
     {
-      path: 'family',
+      path: '/family',
       name: 'family',
       component: Family
     }

@@ -14,7 +14,7 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
       v-else-if="item.type == 'button' && item.id == 'addperson'"
       :onclick="props.addperson"
     />
-    <InputText :input="item" v-else-if="item.type == 'text'" />
+    <InputText :input="item" v-else-if="item.type == 'text' || item.type == 'mail'" />
     <Button
       :text="item.label"
       v-else-if="item.type == 'button' && item.id == 'deleteperson'"

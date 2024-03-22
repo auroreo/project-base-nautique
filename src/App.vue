@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Home from "./views/Home.vue"
+import Home from './views/Home.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import Home from "./views/Home.vue"
 </template>
 
 <style scoped>
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;

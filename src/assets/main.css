@@ -15,24 +15,93 @@
     src: url(../assets/fonts/now.regular.otf);
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
     display: flex;
     justify-content: center;
-    gap: 10em;
+    height: 100vh;
     background-color: #03A6C4;
+    background-image: url(./img/bg-form.png);
+    background-repeat: no-repeat;
+    background-size: contain ;
     color: white;
-    font-family: 'Now Medium';
+    font-family: 'Now Regular';
     font-size: 24px;
+    padding-left: 5em;
+    padding-right: 5em;
+    gap: 5em;
+    align-items: center;
+}
+
+#style-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
 }
 
 #head {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 h2 {
     font-family: 'Now Black';
     font-size: 52px;
-    text-shadow: 0 4px 4px 0 black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form .type-text {
+    display: flex;
+    flex-direction: column;
+}
+
+form .type-checkbox {
+    display: flex;
+    gap: 1em;
+}
+
+form .type-checkbox,p {
+    font-size: 18px;
+}
+
+.label-text {
+    font-family: 'Now Medium';
+}
+
+.input-text {
+    padding: 0.5em;
+    font-size: 24px;
+    border: solid 2px #03A6C4;
+    border-radius: 6px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+button {
+    font-family: 'Now Black';
+    font-size: 32px;
+    color: #03A6C4;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 15px;
+    border-style: none;
+    border-bottom: solid 4px #006a7d;
+}
+
+button:active {
+    border-bottom: none;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 4px;
 }
 

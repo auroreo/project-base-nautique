@@ -1,12 +1,7 @@
 <script setup>
 // *** IMPORTS ***
-import { writeData, deleteData, readData } from '../firebase'
 import Form from '../components/Form.vue'
 import { ref } from 'vue'
-
-// console.log(writeData);
-// console.log(deleteData);
-// console.log(readData);
 
 // *** DATAS ***
 // ref permet de créer une variable qui pourra être utilisée dans d'autres components en tant que props
@@ -53,11 +48,9 @@ const inputs = ref([
 </script>
 
 <template>
-  <form action="">
-    <!-- !!! component formulaire -->
-    <Form :inputs="inputs" />
-    <!-- récupération de la variable inputs -->
-  </form>
+  <!-- !!! component formulaire -->
+  <Form :inputs="inputs" />
+  <!-- récupération de la variable inputs -->
 
   <!-- test croix qui ferme -->
   <RouterLink to="/">X</RouterLink>

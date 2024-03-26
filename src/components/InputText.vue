@@ -4,5 +4,5 @@ const props = defineProps(['input'])
 
 <template>
   <label :for="props.input.name"> {{ props.input.label }} </label>&nbsp
-  <input :type="props.input.type" :name="props.input.name" :id="props.input.id" />
+  <input :type="props.input.type" :name="props.input.name" :id="props.input.id" required/>
 </template>

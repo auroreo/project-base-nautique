@@ -14,7 +14,7 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
     :key="index"
     :class="[item.type == 'checkbox' ? 'type-checkbox' : 'type-text', item.id == 'resp' && 'resp']"
   >
-  <span v-if="routeName === 'group' && item.id === 'resp'">Je soussigné(e)</span>
+  <span v-if="routeName === 'group' && item.id === 'resp'">Je soussigné(e)<span class="red-required">*</span></span>
     <InputCheckbox :input="item" v-if="item.type == 'checkbox'" />
     <Button
       :text="item.label"

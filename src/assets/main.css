@@ -31,7 +31,7 @@ main {
   font-family: 'Now Regular';
   font-size: 24px;
   padding-left: 5em;
-  padding-right: 5em;
+  padding-right: 3em;
   gap: 5em;
   align-items: center;
 }
@@ -83,7 +83,11 @@ p {
 }
 
 div.resp span {
-  font-size: 2vh;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.327);
 }
 
 div.resp {
@@ -93,7 +97,7 @@ div.resp {
 
 div.resp section input {
   width: 100%;
-  margin-inline: 2rem;
+  margin-inline: 1vh;
 }
 
 section.resp-section {
@@ -103,6 +107,7 @@ section.resp-section {
 .label-text {
   font-family: 'Now Medium';
   font-size: 1.8rem;
+  font-weight: smaller;
 }
 
 .input-text {
@@ -132,5 +137,6 @@ button:active {
 }
 
 .red-required {
-  color: red;
+  color: rgb(255, 36, 36);
+  font-size: 3rem;
 }

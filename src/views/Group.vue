@@ -7,16 +7,18 @@ import { ref } from 'vue'
 // ref permet de créer une variable qui pourra être utilisée dans d'autres components en tant que props
 const inputs = ref([
   {
-    label: 'Nom du groupe*',
+    label: 'Nom du groupe',
     type: 'text',
     name: 'lastname',
-    id: 'lastname'
+    id: 'lastname',
+    placeholder: 'Les vachettes'
   },
   {
     label: 'Adresse mail',
     type: 'mail',
     name: 'mail',
-    id: 'mail'
+    id: 'mail',
+    placeholder:'email@gmail.com'
   },
   {
     type: 'text',

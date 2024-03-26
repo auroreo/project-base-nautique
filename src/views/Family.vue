@@ -12,9 +12,10 @@ const addPersonn = () => {
   index_personne += 1
   count += 1
   let newPerson = {
-    label: 'Personne ' + count,
+    label: 'Personne '+ count,
     type: 'text',
-    delete: true
+    name: 'person',
+    id: 'person'
   }
   inputs.value.splice(index_personne, 0, newPerson)
 }

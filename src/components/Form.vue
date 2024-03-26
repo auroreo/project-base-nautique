@@ -25,10 +25,11 @@
     :onclick="props.deleteperson"
     />
   </div> 
-    
     <p v-if="routeName != 'individual'">En remplissant ce document, vous renoncez à souscrire une assurance individuelle corporelle complémentaire de 8 euros. <br> Si vous souhaitez y adhérer, veuillez vous rendre à l'accueil.</p>
     <p>L’association Loeuilly kayak décline toute responsabilité en cas de perte/vol de vos affaires personnelles.</p>
     <div>
-    <Button text="Valider" />
-  </div>
-</template> 
+      <Button type="submit" text="Valider" />
+    </div>
+  </form>
+
+</template>

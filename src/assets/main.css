@@ -14,6 +14,16 @@
     src: url(../assets/fonts/now.regular.otf);
 }
 
+@font-face {
+    font-family: 'Gagalin';
+    src: url(../assets/fonts/Gagalin-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Ananias Bold';
+    src: url(../assets/fonts/Ananias-Bold.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -107,3 +117,61 @@ button:active {
 .red-required {
     color: red;
 }
+
+
+/* ******* Accueil ******* */
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 100vh;
+    background-color: #03A6C4;
+    background-image: url(./img/bg-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+header span {
+    font-family: 'Gagalin';
+    font-size: 50px;
+    text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.60);
+
+}
+
+header h1 {
+    font-family: 'Ananias Bold';
+    font-size: 80px;
+    text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.60);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+nav a img {
+    height: 450px;
+}
+
+

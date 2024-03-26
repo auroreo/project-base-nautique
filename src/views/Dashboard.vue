@@ -2,8 +2,10 @@
 
 import { deleteData, readData } from '../firebase.js';
 
+let allData;
+
 readData('family').then((data) => {
-    console.log(data);
+    allData = data;
 });
 
 </script>
@@ -18,8 +20,8 @@ readData('family').then((data) => {
                 </button>
             </form>
         </div>
-        <div class="item">
-            <h3 class="title_h3">Name</h3>
+        <div class="item" v-for="(value, key) in allData" :key="key">
+            <h3 class="title_h3">{{ value['firstname'] }}</h3>
         </div>
     </main>
 </template>

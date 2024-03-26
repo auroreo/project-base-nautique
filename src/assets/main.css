@@ -3,26 +3,6 @@
 body {
     margin: 0;
 }
-
-main.merci {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url(./background_merci.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.titre_merci {
-    font-family: 'Gagalin';
-    font-size: 120px;
-    font-weight: 100;
-    color:  #ffffff;
-    text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25) ;
   
 @font-face {
   font-family: 'Now Black';
@@ -196,4 +176,26 @@ nav a {
 
 nav a img {
   height: 450px;
+}
+
+/* ****** BONNE NAVIGATION ****** */
+
+main.merci {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(./background_merci.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.titre_merci {
+  font-family: 'Gagalin';
+  font-size: 120px;
+  font-weight: 100;
+  color:  #ffffff;
+  text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
 }

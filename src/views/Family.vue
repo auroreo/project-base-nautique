@@ -12,9 +12,10 @@ const addPersonn = () => {
   index_personne += 1
   count += 1
   let newPerson = {
-    label: 'Personne ' + count,
+    label: 'Personne '+ count,
     type: 'text',
-    delete: true
+    name: 'person',
+    id: 'person'
   }
   inputs.value.splice(index_personne, 0, newPerson)
 }
@@ -94,8 +95,6 @@ const inputs = ref([
 </script>
 
 <template>
-  <form action="">
-    <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
-  </form>
+  <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
   <RouterLink to="/">X</RouterLink>
 </template>

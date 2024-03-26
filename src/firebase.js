@@ -4,7 +4,8 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebas
 import {
   getFirestore,
   doc,
-  setDoc,
+  collection,
+  addDoc,
   deleteDoc,
   getDoc
 } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js'
@@ -32,14 +33,12 @@ let count = 0
 // const collectionTest = doc(firestore, 'Test');
 
 // fonction pour écrire une data
-export const writeData = (collection_name, col_module, docData) => {
+export const writeData = async (collection_name, docData) => {
   // docData, objet pour stocker les données
   try {
-    // setDoc pour ajouter une donner ou la mettre a jour
-    count += 1
-    const collection = doc(db, collection_name, col_module + count)
-    setDoc(collection, docData, { merge: true }) // merge si tu veux remplacer les champs et ne pas tout ecraser.
-    console.log(collection._key.path.segments, 'value inserted')
+    // addDoc pour ajouter une donner
+    await addDoc(collection(db, collection_name), docData);
+    console.log('value inserted');
   } catch (error) {
     console.log(error)
   }

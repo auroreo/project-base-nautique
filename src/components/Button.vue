@@ -1,7 +1,7 @@
 <script setup>
-const props = defineProps(['onclick', 'text'])
+const props = defineProps(['onclick', 'text', 'type'])
 </script>
 
 <template>
-  <button type="submit" @click.prevent="props.onclick">{{ props.text }}</button>
+  <button :type="props.type ?? 'button'" @click="props.onclick">{{ props.text }}</button>
 </template>

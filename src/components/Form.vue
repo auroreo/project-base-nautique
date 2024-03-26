@@ -5,7 +5,6 @@ import InputCheckbox from './InputCheckbox.vue'
 import Button from './Button.vue'
 import { useRoute } from 'vue-router'
 
-import { useRoute } from 'vue-router'
 const routeName = useRoute().name
 
 const writeFormData = () => {

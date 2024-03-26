@@ -21,6 +21,9 @@ import { RouterLink, RouterView } from 'vue-router'
         <img src="../assets/img/illu-home-group.png" alt="" />
         <h2>GROUPE</h2>
       </RouterLink>
+      <RouterLink to="/dashboard">
+        <h2>Dashboard</h2>
+      </RouterLink>
     </nav>
   </header>
 </template>

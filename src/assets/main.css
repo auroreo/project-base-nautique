@@ -172,3 +172,39 @@ nav a {
 nav a img {
   height: 450px;
 }
+
+/* *********** BARRE DE RECHERCHE *********** */
+main#dashboard{
+  background-color: #fff;
+  background-image: none;
+  padding: 0 0 0;
+  align-items: flex-start;
+}
+.search-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.search-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0px 5px 5px 0px;
+  width: 300px;
+  max-width: 100%;
+}
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius:0px 5px 5px 0px;
+  cursor: pointer;
+  width: 9rem;
+}
+.icon_loupe{
+  width: 2.5vw;
+}
+form#search_bar{
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}

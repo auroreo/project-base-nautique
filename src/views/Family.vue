@@ -41,12 +41,6 @@ const inputs = ref([
     id: 'firstname'
   },
   {
-    label: "Je soussigné Mr, Mme l'ensemble de ma famille ci-dessous :",
-    type: 'checkbox',
-    name: 'validation',
-    id: 'validation'
-  },
-  {
     label: 'Personne 1',
     type: 'text',
     name: 'person',
@@ -71,7 +65,7 @@ const inputs = ref([
     id: 'mail'
   },
   {
-    label: 'J’atteste savoir nager 25 mètres et s’immerger.',
+    label: 'Savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'disclaimer',
     id: 'disclaimer'
@@ -96,17 +90,17 @@ const inputs = ref([
 <template>
   <main>
     <section class="illu">
-        <img src="../assets/img/illu-indiv.png" alt="">
+        <img src="../assets/img/illu_family.png" alt="">
     </section>
     <section id="style-form">
         <div id="head">
-            <h2>INDIVIDUEL</h2>
+            <h2>FAMILLE</h2>
             <RouterLink to="/">
                 <img src="../assets/img/cross-back.svg" alt="">
             </RouterLink>
         </div>
         <form action="">
-          <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
+          <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson"/>
         </form>
       </section>
   </main>

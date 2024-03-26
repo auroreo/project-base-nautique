@@ -1,4 +1,9 @@
 @import './base.css';
+
+body {
+    margin: 0;
+}
+  
 @font-face {
   font-family: 'Now Black';
   src: url(../assets/fonts/now.black.otf);
@@ -12,6 +17,16 @@
 @font-face {
   font-family: 'Now Regular';
   src: url(../assets/fonts/now.regular.otf);
+}
+
+@font-face {
+  font-family: 'Gagalin';
+  src: url(../assets/fonts/Gagalin-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Ananias Bold';
+  src: url(../assets/fonts/Ananias-Bold.otf);
 }
 
 * {
@@ -141,4 +156,80 @@ button:active {
 .red-required {
   color: rgb(255, 36, 36);
   font-size: 3rem;
+}
+
+/* ******* Accueil ******* */
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  height: 100vh;
+  background-color: #03a6c4;
+  background-image: url(./img/bg-home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+header span {
+  font-family: 'Gagalin';
+  font-size: 50px;
+  text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-family: 'Ananias Bold';
+  font-size: 80px;
+  text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.6);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav a img {
+  height: 450px;
+}
+
+/* ****** BONNE NAVIGATION ****** */
+
+main.merci {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(./background_merci.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.titre_merci {
+  font-family: 'Gagalin';
+  font-size: 120px;
+  font-weight: 100;
+  color:  #ffffff;
+  text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
 }

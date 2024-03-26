@@ -1,10 +1,8 @@
-<script setup>
-// *** IMPORTS ***
-import Form from '../components/Form.vue'
-import { ref } from 'vue'
 
-// *** DATAS ***
-// ref permet de créer une variable qui pourra être utilisée dans d'autres components en tant que props
+<script setup>
+import Form from '../components/Form.vue'
+import { onMounted, ref } from 'vue'
+
 const inputs = ref([
   {
     label: 'Nom du groupe',

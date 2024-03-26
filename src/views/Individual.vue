@@ -1,5 +1,6 @@
 <script setup>
 // *** IMPORTS ***
+import { writeData, deleteData, readData } from '../firebase'
 import Form from '../components/Form.vue'
 import { ref } from 'vue'
 

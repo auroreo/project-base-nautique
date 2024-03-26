@@ -4,7 +4,7 @@ import InputCheckbox from './InputCheckbox.vue'
 import Button from './Button.vue'
 import { useRoute } from 'vue-router'
 
-const routeName = useRoute().name;
+const routeName = useRoute().name
 const props = defineProps(['inputs', 'addperson', 'deleteperson'])
 </script>
 

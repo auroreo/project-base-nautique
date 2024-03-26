@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps(['input'])
-</script>
+
 
 <template>
   <div>
@@ -10,7 +10,7 @@ const props = defineProps(['input'])
       v-if="
         props.input.label === 'Nom' ||
         props.input.label === 'Prénom' ||
-        props.input.label === 'Nom du group'
+        props.input.label === 'Nom du groupe'
       "
       >*</span
     >
@@ -18,7 +18,7 @@ const props = defineProps(['input'])
   <input
     :type="props.input.type"
     :name="props.input.name"
-    :id="props.input.id"
+    :id="props.input.id
     class="input-text"
   />
 </template>

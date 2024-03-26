@@ -1,4 +1,29 @@
 @import './base.css';
+
+body {
+    margin: 0;
+}
+
+main.merci {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./background_merci.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.titre_merci {
+    font-family: 'Gagalin';
+    font-size: 120px;
+    font-weight: 100;
+    color:  #ffffff;
+    text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25) ;
+  
 @font-face {
   font-family: 'Now Black';
   src: url(../assets/fonts/now.black.otf);
@@ -37,7 +62,7 @@ main {
   background-image: url(./img/bg-form.png);
   background-repeat: no-repeat;
   background-size: contain;
-  color: white;
+  color: #FFFFFF;
   font-family: 'Now Regular';
   font-size: 24px;
   padding-left: 5em;
@@ -103,7 +128,7 @@ button {
   font-size: 32px;
   color: #03a6c4;
   padding: 0.5em;
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 15px;
   border-style: none;
   border-bottom: solid 4px #006a7d;
@@ -116,7 +141,7 @@ button:active {
 }
 
 .red-required {
-  color: red;
+  color: #FF0000;
 }
 
 /* ******* Accueil ******* */
@@ -130,7 +155,7 @@ header {
   background-image: url(./img/bg-home.png);
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: #FFFFFF;
   font-size: 24px;
 }
 
@@ -165,7 +190,7 @@ nav a {
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 

@@ -1,3 +1,3 @@
 <template>
-    <div>Formulaire groupe</div>
+  <div>Formulaire groupe</div>
 </template>

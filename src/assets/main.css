@@ -1,5 +1,4 @@
 @import './base.css';
-
 @font-face {
     font-family: 'Now Black';
     src: url(../assets/fonts/now.black.otf);
@@ -108,4 +107,3 @@ button:active {
 .red-required {
     color: red;
 }
-

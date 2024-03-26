@@ -1,5 +1,4 @@
 <script setup>
-
 // *** IMPORTS ***
 import Form from '../components/Form.vue'
 import { ref } from 'vue'
@@ -70,3 +69,4 @@ const inputs = ref(
 </main>
 
 </template>
+

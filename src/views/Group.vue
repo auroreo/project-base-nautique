@@ -50,7 +50,7 @@ const inputs = ref([
 
 <template>
   <form action="">
-    <Form :inputs="inputs"></Form>
+    <Form :inputs="inputs" ></Form>
   </form>
   <RouterLink to="/">X</RouterLink>
 </template>

@@ -94,8 +94,20 @@ const inputs = ref([
 </script>
 
 <template>
-  <form action="">
-    <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
-  </form>
-  <RouterLink to="/">X</RouterLink>
+  <main>
+    <section class="illu">
+        <img src="../assets/img/illu-indiv.png" alt="">
+    </section>
+    <section id="style-form">
+        <div id="head">
+            <h2>INDIVIDUEL</h2>
+            <RouterLink to="/">
+                <img src="../assets/img/cross-back.svg" alt="">
+            </RouterLink>
+        </div>
+        <form action="">
+          <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
+        </form>
+      </section>
+  </main>
 </template>

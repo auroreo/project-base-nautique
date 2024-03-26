@@ -1,5 +1,4 @@
 @import './base.css';
-@import url('https://fonts.cdnfonts.com/css/gagalin');
 
 body {
     margin: 0;
@@ -19,9 +18,182 @@ main.merci {
 }
 
 .titre_merci {
-    font-family: 'Gagalin', sans-serif;
+    font-family: 'Gagalin';
     font-size: 120px;
     font-weight: 100;
     color:  #ffffff;
     text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25) ;
+  
+@font-face {
+  font-family: 'Now Black';
+  src: url(../assets/fonts/now.black.otf);
+}
+
+@font-face {
+  font-family: 'Now Medium';
+  src: url(../assets/fonts/now.medium.otf);
+}
+
+@font-face {
+  font-family: 'Now Regular';
+  src: url(../assets/fonts/now.regular.otf);
+}
+
+@font-face {
+  font-family: 'Gagalin';
+  src: url(../assets/fonts/Gagalin-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Ananias Bold';
+  src: url(../assets/fonts/Ananias-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #03a6c4;
+  background-image: url(./img/bg-form.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #FFFFFF;
+  font-family: 'Now Regular';
+  font-size: 24px;
+  padding-left: 5em;
+  padding-right: 5em;
+  gap: 5em;
+  align-items: center;
+}
+
+#style-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+#head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Now Black';
+  font-size: 52px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form .type-text {
+  display: flex;
+  flex-direction: column;
+}
+
+form .type-checkbox {
+  display: flex;
+  gap: 1em;
+}
+
+form .type-checkbox,
+p {
+  font-size: 18px;
+}
+
+.label-text {
+  font-family: 'Now Medium';
+}
+
+.input-text {
+  padding: 0.5em;
+  font-size: 24px;
+  border: solid 2px #03a6c4;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+button {
+  font-family: 'Now Black';
+  font-size: 32px;
+  color: #03a6c4;
+  padding: 0.5em;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border-style: none;
+  border-bottom: solid 4px #006a7d;
+}
+
+button:active {
+  border-bottom: none;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 4px;
+}
+
+.red-required {
+  color: #FF0000;
+}
+
+/* ******* Accueil ******* */
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  height: 100vh;
+  background-color: #03a6c4;
+  background-image: url(./img/bg-home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+header span {
+  font-family: 'Gagalin';
+  font-size: 50px;
+  text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-family: 'Ananias Bold';
+  font-size: 80px;
+  text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.6);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav a img {
+  height: 450px;
 }

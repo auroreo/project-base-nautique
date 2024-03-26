@@ -1,19 +1,24 @@
 <script setup>
 const props = defineProps(['input'])
 
-console.log(props.input)
-</script>
 
 <template>
-  <label :for="props.input.name"> {{ props.input.label }} </label
-  ><br v-if="props.input.id != 'manager'" />
+  <div>
+    <label :for="props.input.name" class="label-text"> {{ props.input.label }} </label>
+    <span
+      class="red-required"
+      v-if="
+        props.input.label === 'Nom' ||
+        props.input.label === 'Prénom' ||
+        props.input.label === 'Nom du groupe'
+      "
+      >*</span
+    >
+  </div>
   <input
     :type="props.input.type"
     :name="props.input.name"
-    :id="props.input.id"
-    :placeholder="props.input.placeholder"
+    :id="props.input.id
+    class="input-text"
   />
-  <label :for="props.input.name" v-if="props.input.id == 'manager'">
-    {{ props.input.label2 }}
-  </label>
 </template>

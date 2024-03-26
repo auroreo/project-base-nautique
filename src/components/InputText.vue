@@ -10,6 +10,3 @@ const props = defineProps(['input'])
 <input :type="props.input.type" :name="props.input.name" :id="props.input.id" class="input-text">
 
 </template>
-
-</template>
-

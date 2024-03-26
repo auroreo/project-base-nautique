@@ -42,11 +42,11 @@ main {
   background-image: url(./img/bg-form.png);
   background-repeat: no-repeat;
   background-size: contain;
-  color: #FFFFFF;
+  color: white;
   font-family: 'Now Regular';
   font-size: 24px;
   padding-left: 5em;
-  padding-right: 5em;
+  padding-right: 3em;
   gap: 5em;
   align-items: center;
 }
@@ -76,6 +76,12 @@ form {
   gap: 1em;
 }
 
+section.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 form .type-text {
   display: flex;
   flex-direction: column;
@@ -91,8 +97,34 @@ p {
   font-size: 18px;
 }
 
+div.resp span {
+  font-size: 18px;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.327);
+  font-family: 'Now regular';
+  font-size: 1.2rem;
+}
+
+div.resp {
+  flex-direction: row;
+  align-items: center;
+}
+
+div.resp section input {
+  width: 100%;
+  margin-inline: 1vh;
+}
+
+section.resp-section {
+  flex-direction: row;
+}
+
 .label-text {
   font-family: 'Now Medium';
+  font-size: 1.8rem;
+  font-weight: smaller;
 }
 
 .input-text {
@@ -101,6 +133,7 @@ p {
   border: solid 2px #03a6c4;
   border-radius: 6px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 60%;
 }
 
 button {
@@ -108,7 +141,7 @@ button {
   font-size: 32px;
   color: #03a6c4;
   padding: 0.5em;
-  background-color: #FFFFFF;
+  background-color: white;
   border-radius: 15px;
   border-style: none;
   border-bottom: solid 4px #006a7d;
@@ -121,7 +154,8 @@ button:active {
 }
 
 .red-required {
-  color: #FF0000;
+  color: rgb(255, 36, 36);
+  font-size: 3rem;
 }
 
 /* ******* Accueil ******* */

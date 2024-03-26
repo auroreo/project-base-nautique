@@ -11,7 +11,7 @@
 <template> 
   <p v-if="routeName='family'">Je soussigné(e) Mr/Mme:</p>
   <div v-for="(item, index) in props.inputs" :key="index" :class="[item.type == 'checkbox' ? 'type-checkbox' : 'type-text']">
-    <p v-if="routeName='family' && item.id=='person'">Atteste que toutes les personnes de ma famille ci-dessous </p>
+    <p v-if="routeName='family' && item.id=='person'" id="input ">Atteste que toutes les personnes de ma famille ci-dessous: </p>
     <InputCheckbox :input="item" v-if="item.type == 'checkbox'" />
     <Button
     :text="item.label"

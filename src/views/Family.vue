@@ -45,6 +45,7 @@ const inputs = ref([
     type: 'text',
     name: 'person',
     id: 'person',
+    placeholder:'Nom,Prénom'
   },
   {
     label: 'Ajouter une personne',

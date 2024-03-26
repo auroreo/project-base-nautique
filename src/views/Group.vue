@@ -20,8 +20,8 @@ const inputs = ref([
   },
   {
     type: 'text',
-    name: 'mail',
-    id: 'mail',
+    name: 'resp',
+    id: 'resp',
     placeholder : 'Mr, Mme'
   },
 
@@ -51,7 +51,7 @@ const inputs = ref([
 <template>
   <main>
     <section class="illu">
-      <img src="../assets/img/illu-indiv.png" alt="" />
+      <img src="../assets/img/illu-grp.png" alt="" />
     </section>
     <section id="style-form">
       <div id="head">

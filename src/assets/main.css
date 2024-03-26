@@ -61,6 +61,12 @@ form {
   gap: 1em;
 }
 
+section.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 form .type-text {
   display: flex;
   flex-direction: column;
@@ -76,8 +82,23 @@ p {
   font-size: 18px;
 }
 
+div.resp {
+  flex-direction: row;
+  align-items: center;
+}
+
+div.resp span {
+  font-size: 3vh;
+}
+
+div.resp section input {
+  width: 100%;
+  margin-inline: 2rem;
+}
+
 .label-text {
   font-family: 'Now Medium';
+  font-size: 1.8rem;
 }
 
 .input-text {
@@ -86,6 +107,7 @@ p {
   border: solid 2px #03a6c4;
   border-radius: 6px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 60%;
 }
 
 button {

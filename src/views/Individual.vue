@@ -1,7 +1,12 @@
 <script setup>
 // *** IMPORTS ***
+import { writeData, deleteData, readData } from '../firebase'
 import Form from '../components/Form.vue'
 import { ref } from 'vue'
+
+// console.log(writeData);
+// console.log(deleteData);
+// console.log(readData);
 
 // *** DATAS ***
 // ref permet de créer une variable qui pourra être utilisée dans d'autres components en tant que props 

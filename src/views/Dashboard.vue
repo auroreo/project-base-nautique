@@ -12,5 +12,8 @@
                 </button>
             </form>
         </div>
+        <div class="item">
+            <h3 class="title_h3">Name</h3>
+        </div>
     </main>
 </template>

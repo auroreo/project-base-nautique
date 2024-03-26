@@ -105,3 +105,7 @@ button:active {
     margin-bottom: 4px;
 }
 
+.red-required {
+    color: red;
+}
+

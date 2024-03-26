@@ -88,6 +88,8 @@ div.resp span {
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.327);
+  font-family: 'Now regular';
+  font-size: 1.2rem;
 }
 
 div.resp {

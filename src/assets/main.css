@@ -179,16 +179,22 @@ main#dashboard{
   background-image: none;
   padding: 0 0 0;
   align-items: flex-start;
+  display:grid;
+  justify-content: center;
+  gap: 0;
+  height: 20vh ;
+  width: 100%;
 }
 .search-container {
   margin-top: 20px;
   text-align: center;
+  width: 100%;
 }
 .search-box {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 0px 5px 5px 0px;
-  width: 300px;
+  border-radius: 5px 0px 0px 5px;
+  width: 100%;
   max-width: 100%;
 }
 .search-button {
@@ -198,13 +204,25 @@ main#dashboard{
   border: none;
   border-radius:0px 5px 5px 0px;
   cursor: pointer;
-  width: 9rem;
+  width: 4rem;
 }
 .icon_loupe{
-  width: 2.5vw;
+  width: 100%;
 }
 form#search_bar{
   display: flex;
   flex-direction: row;
   gap: 0;
+  width: 100%;;
+}
+
+/* *********** INFO BDD *********** */
+.title_h3{
+  font-size: 20px;
+  background-color: #007bff;
+  display: flex;
+  padding: 15px;
+  border-radius: 3px;
+  font-weight: 200;
+  width: 400px;
 }

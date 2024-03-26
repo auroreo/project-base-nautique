@@ -2,7 +2,6 @@
 import Form from '../components/Form.vue'
 import { onMounted, ref } from 'vue'
 
-
 const inputs = ref([
   {
     label: 'Nom du groupe',
@@ -19,8 +18,8 @@ const inputs = ref([
     placeholder: 'mail@kayak.com'
   },
   {
-    label: "Je, soussigné ",
-    label2:"responsable du groupe,",
+    label: 'Je, soussigné ',
+    label2: 'responsable du groupe,',
     type: 'text',
     name: 'manager',
     id: 'manager',
@@ -47,7 +46,6 @@ const inputs = ref([
     id: 'responsability'
   }
 ])
-
 </script>
 
 <template>

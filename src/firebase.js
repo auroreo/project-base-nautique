@@ -4,9 +4,11 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebas
 import {
   getFirestore,
   doc,
+  collection,
   setDoc,
   deleteDoc,
-  getDoc
+  getDoc,
+  getDocs
 } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js'
 
 const firebaseConfig = {
@@ -71,29 +73,34 @@ export const writeData = (collection_name, col_module, docData) => {
 
 export const deleteData = (collection_name, col_module) => {
   try {
-    const collection = doc(db, collection_name, col_module)
-    deleteDoc(collection, col_module)
+    const collection = doc(db, collection_name, col_module);
+    deleteDoc(collection, col_module);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
 
 // EXEMPLE DE SUPRESSION DE DATA
 // deleteData('individuel', 'personne1');
 
-export const readData = async (collection_name, col_module) => {
+export const readData = async (collection_name) => {
   try {
-    const colRef = doc(db, collection_name, col_module)
-    const docSnap = await getDoc(colRef)
+    const colRef = collection(db, collection_name);
+    const docSnap = await getDocs(colRef);
 
-    if (docSnap.exists()) {
-      console.log('Données trouvées :', docSnap.data())
-      return docSnap.data()
+    let arrayData = {};
+    docSnap.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      arrayData[doc.id] = doc.data(); 
+    });
+
+    if (arrayData) {
+      return arrayData;
     } else {
-      console.log('Aucune donnée trouvée pour ce document.')
+      console.log('Aucune donnée trouvée pour ce document.');
     }
   } catch (error) {
-    console.error('Erreur lors de la lecture des données :', error)
+    console.error('Erreur lors de la lecture des données :', error);
   }
 }
 

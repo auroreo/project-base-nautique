@@ -1,5 +1,11 @@
 <script setup>
 
+import { deleteData, readData } from '../firebase.js';
+
+readData('family').then((data) => {
+    console.log(data);
+});
+
 </script>
 
 <template>

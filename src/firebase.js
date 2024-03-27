@@ -7,7 +7,7 @@ import {
   collection,
   addDoc,
   deleteDoc,
-  getDoc
+  getDocs
 } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js'
 
 const firebaseConfig = {
@@ -80,14 +80,19 @@ export const deleteData = (collection_name, col_module) => {
 // EXEMPLE DE SUPRESSION DE DATA
 // deleteData('individuel', 'personne1');
 
-export const readData = async (collection_name, col_module) => {
+export const readData = async (collection_name) => {
   try {
-    const colRef = doc(db, collection_name, col_module)
-    const docSnap = await getDoc(colRef)
+    const colRef = collection(db, collection_name)
+    const docSnap = await getDocs(colRef)
 
-    if (docSnap.exists()) {
-      console.log('Données trouvées :', docSnap.data())
-      return docSnap.data()
+    let arrayData = {}
+    docSnap.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      arrayData[doc.id] = doc.data()
+    })
+
+    if (arrayData) {
+      return arrayData
     } else {
       console.log('Aucune donnée trouvée pour ce document.')
     }

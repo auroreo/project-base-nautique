@@ -57,7 +57,7 @@ const inputs = ref([
     <section id="style-form">
       <div id="head">
         <h2>GROUPE</h2>
-        <RouterLink to="/">
+        <RouterLink to="/home">
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>

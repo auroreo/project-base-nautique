@@ -12,7 +12,7 @@ const addPersonn = () => {
   index_personne += 1
   count += 1
   let newPerson = {
-    label: 'Personne '+ count,
+    label: 'Personne ' + count,
     type: 'text',
     name: 'person',
     id: 'person'
@@ -46,7 +46,7 @@ const inputs = ref([
     type: 'text',
     name: 'person',
     id: 'person',
-    placeholder:'Nom,Prénom'
+    placeholder: 'Nom,Prénom'
   },
   {
     label: 'Ajouter une personne',
@@ -92,18 +92,18 @@ const inputs = ref([
 <template>
   <main>
     <section class="illu">
-        <img src="../assets/img/illu_family.png" alt="">
+      <img src="../assets/img/illu_family.png" alt="" />
     </section>
     <section id="style-form">
-        <div id="head">
-            <h2>FAMILLE</h2>
-            <RouterLink to="/">
-                <img src="../assets/img/cross-back.svg" alt="">
-            </RouterLink>
-        </div>
-        <form action="">
-          <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson"/>
-        </form>
-      </section>
+      <div id="head">
+        <h2>FAMILLE</h2>
+        <RouterLink to="/home">
+          <img src="../assets/img/cross-back.svg" alt="" />
+        </RouterLink>
+      </div>
+      <form action="">
+        <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
+      </form>
+    </section>
   </main>
 </template>

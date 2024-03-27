@@ -5,7 +5,7 @@ let timer = 300000 /*5min*/
 const router = useRouter()
 const resetTimer = () => {
   setTimeout(() => {
-    router.replace('veille')
+    router.replace('/')
   }, timer)
 }
 onMounted(() => {

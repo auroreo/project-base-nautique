@@ -248,3 +248,34 @@ main.merci {
   color: #ffffff;
   text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
 }
+
+.full_screen_tl {
+  height: 100vh;
+  display: flex;
+  row-gap: 3em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Screen AFK */
+
+.logo_pic_tl {
+  border: 30px solid #75d0e0;
+  border-radius: 100%;
+  background-color: #03a6c4;
+  height: 440px;
+  width: 440px;
+  box-shadow: 4px 0 100px rgba(0, 0, 0, 0.5);
+}
+.titre_veille_tl {
+  font-weight: lighter;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'gagalin';
+  color: white;
+  text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+  font-size: 70px;
+}

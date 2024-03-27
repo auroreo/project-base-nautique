@@ -51,9 +51,7 @@ watch([firstTouch, secondTouch], ([newA, newB], [prevA, prevB]) => {
 </script>
 
 <template>
-  <div id="test"></div>
   <RouterView />
-  <div id="test2"></div>
 </template>
 
 <style scoped>

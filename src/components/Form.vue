@@ -8,39 +8,47 @@ import { useRoute } from 'vue-router'
 const routeName = useRoute().name
 
 const writeFormData = () => {
-  const form = document.querySelector('form#form');
-  const formData = new FormData(form);
-  
+  const form = document.querySelector('form#form')
+  const formData = new FormData(form)
+
   let data = {}
   let persons = []
-  
+
   for (const [key, value] of formData) {
     if (key == 'person') {
-      persons.push(value);
+      persons.push(value)
       data = {
         ...data,
-        persons:persons
+        persons: persons
       }
     } else {
       data = {
-        ...data, 
-        [key]:value
+        ...data,
+        [key]: value
       }
     }
   }
-  
-  writeData(routeName, data);
-  form.reset();
+
+  writeData(routeName, data)
+  form.reset()
 }
 
 const props = defineProps(['inputs', 'addperson', 'deleteperson'])
-
 </script>
 
 <template>
   <form id="form" @submit.prevent="writeFormData">
-    <div v-for="(item, index) in props.inputs" :key="index" :class="[item.type == 'checkbox' ? 'type-checkbox' : 'type-text', item.id == 'resp' && 'resp']">
-      <span v-if="routeName === 'group' && item.id === 'resp'">Je soussigné(e)<span class="red-required">*</span></span>
+    <div
+      v-for="(item, index) in props.inputs"
+      :key="index"
+      :class="[
+        item.type == 'checkbox' ? 'type-checkbox' : 'type-text',
+        item.id == 'resp' && 'resp'
+      ]"
+    >
+      <span v-if="routeName === 'group' && item.id === 'resp'"
+        >Je soussigné(e)<span class="red-required">*</span></span
+      >
       <InputCheckbox :input="item" v-if="item.type == 'checkbox'" />
       <Button
         :text="item.label"
@@ -55,11 +63,17 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
       />
       <span v-if="routeName === 'group' && item.id === 'resp'">responsable du groupe</span>
     </div>
-    <p v-if="routeName != 'individual'">En remplissant ce document, vous renoncez à souscrire une assurance individuelle corporelle complémentaire de 8 euros. <br> Si vous souhaitez y adhérer, veuillez vous rendre à l'accueil.</p>
-    <p>L’association Loeuilly kayak décline toute responsabilité en cas de perte/vol de vos affaires personnelles.</p>
+    <p v-if="routeName != 'individual'">
+      En remplissant ce document, vous renoncez à souscrire une assurance individuelle corporelle
+      complémentaire de 8 euros. <br />
+      Si vous souhaitez y adhérer, veuillez vous rendre à l'accueil.
+    </p>
+    <p>
+      L’association Loeuilly kayak décline toute responsabilité en cas de perte/vol de vos affaires
+      personnelles.
+    </p>
     <div>
       <Button type="submit" text="Valider" />
     </div>
   </form>
-
 </template>

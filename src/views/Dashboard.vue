@@ -1,20 +1,21 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onBeforeMount, onMounted, ref } from 'vue'
 import { deleteData, readData } from '../firebase.js'
 import Button from '@/components/Button.vue'
 import exportFromJSON from 'export-from-json'
 let allData = []
-
+const logged = ref(false)
+onBeforeMount(() => {})
 onMounted(() => {
-  readData('family').then((data) => {
-    allData.push(data)
-  })
-  readData('individual').then((data) => {
-    allData.push(data)
-  })
-  readData('group').then((data) => {
-    allData.push(data)
-  })
+  // readData('family').then((data) => {
+  //   allData.push(data)
+  // })
+  // readData('individual').then((data) => {
+  //   allData.push(data)
+  // })
+  // readData('group').then((data) => {
+  //   allData.push(data)
+  // })
 })
 
 const exportArray = (data) => {
@@ -31,14 +32,24 @@ const exportArray = (data) => {
 
 <template>
   <main id="dashboard">
-    <Button
-      text="Exporter et supprimer les données"
-      type="button"
-      :onclick="
-        () => {
-          exportArray(allData.flat(1))
-        }
-      "
-    />
+    <div v-if="!logged">
+      <form>
+        <label> Login : </label>
+        <input type="email" />
+        <label> Mot de passe : </label>
+        <input />
+      </form>
+    </div>
+    <div v-else>
+      <Button
+        text="Exporter et supprimer les données"
+        type="button"
+        :onclick="
+          () => {
+            exportArray(allData.flat(1))
+          }
+        "
+      />
+    </div>
   </main>
 </template>

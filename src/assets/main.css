@@ -297,3 +297,21 @@ main#dashboard {
   font-weight: 200;
   width: 400px;
 }
+
+#test {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#test2 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: calc(100% - 100px);
+  left: calc(100% - 100px);
+}

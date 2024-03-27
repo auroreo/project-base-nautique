@@ -19,10 +19,17 @@ const inputs = ref([
     id: 'firstname'
   },
   {
-    label: 'Adresse électronique',
+    label: 'Adresse mail',
     type: 'mail',
     name: 'mail',
     id: 'mail'
+  },
+  {
+    label:
+      "En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.",
+    type: 'checkbox',
+    name: 'newsletter',
+    id: 'newsletter'
   },
   {
     label: 'J’atteste savoir nager 25 mètres et s’immerger.',
@@ -36,24 +43,25 @@ const inputs = ref([
     type: 'checkbox',
     name: 'img-right',
     id: 'img-right'
-  },
-  {
-    label:
-      'L’association Loeuilly kayak décline toute responsabilité en cas de perte/vol de vos affaires personnelles.',
-    type: 'checkbox',
-    name: 'responsability',
-    id: 'responsability'
   }
 ])
 </script>
 
 <template>
-  <form action="">
-    <!-- !!! component formulaire -->
-    <Form :inputs="inputs" />
-    <!-- récupération de la variable inputs -->
-  </form>
-
-  <!-- test croix qui ferme -->
-  <RouterLink to="/">X</RouterLink>
+  <main>
+    <section class="illu">
+      <img src="../assets/img/illu-indiv.png" alt="" />
+    </section>
+    <section id="style-form">
+      <div id="head">
+        <h2>INDIVIDUEL</h2>
+        <RouterLink to="/">
+          <img src="../assets/img/cross-back.svg" alt="" />
+        </RouterLink>
+      </div>
+      <form action="">
+        <Form :inputs="inputs" />
+      </form>
+    </section>
+  </main>
 </template>

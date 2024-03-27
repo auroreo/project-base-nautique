@@ -6,30 +6,38 @@ const inputs = ref([
   {
     label: 'Nom du groupe',
     type: 'text',
-    name: 'groupname',
-    id: 'groupname',
-    placeholder: 'Kayak team'
+    name: 'lastname',
+    id: 'lastname',
+    placeholder: 'Les vachettes'
   },
   {
-    label: 'Adresse électronique (Pas obligatoire)',
+    label: 'Adresse mail',
     type: 'mail',
-    name: 'email',
-    id: 'email',
-    placeholder: 'mail@kayak.com'
+    name: 'mail',
+    id: 'mail',
+    placeholder: 'email@gmail.com'
   },
   {
     label: 'Je, soussigné ',
     label2: 'responsable du groupe,',
     type: 'text',
-    name: 'manager',
-    id: 'manager',
+    name: 'resp',
+    id: 'resp',
     placeholder: 'Mr, Mme'
+  },
+
+  {
+    label:
+      "En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.",
+    type: 'checkbox',
+    name: 'newsletter',
+    id: 'newsletter'
   },
   {
     label: 'J’atteste savoir nager 25 mètres et s’immerger.',
     type: 'checkbox',
-    name: 'disclaimer',
-    id: 'disclaimer'
+    name: 'attestation',
+    id: 'attestation'
   },
   {
     label:
@@ -37,20 +45,25 @@ const inputs = ref([
     type: 'checkbox',
     name: 'img-right',
     id: 'img-right'
-  },
-  {
-    label:
-      'L’association Loeuilly kayak décline toutes responsabilité en cas de perte/vole de vos affaires personnelles.',
-    type: 'checkbox',
-    name: 'responsability',
-    id: 'responsability'
   }
 ])
 </script>
 
 <template>
-  <form action="">
-    <Form :inputs="inputs" ></Form>
-  </form>
-  <RouterLink to="/">X</RouterLink>
+  <main>
+    <section class="illu">
+      <img src="../assets/img/illu-grp.png" alt="" />
+    </section>
+    <section id="style-form">
+      <div id="head">
+        <h2>GROUPE</h2>
+        <RouterLink to="/">
+          <img src="../assets/img/cross-back.svg" alt="" />
+        </RouterLink>
+      </div>
+      <form action="">
+        <Form :inputs="inputs" />
+      </form>
+    </section>
+  </main>
 </template>

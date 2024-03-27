@@ -4,6 +4,7 @@ import Individual from '../views/Individual.vue'
 import Group from '../views/Group.vue'
 import Family from '../views/Family.vue'
 import Veille from '@/views/Veille.vue'
+import Merci from '@/views/Merci.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,9 +30,14 @@ const router = createRouter({
       component: Family
     },
     {
-      path:'/veille',
-      name:'veille',
-      component: Veille   
+      path: '/veille',
+      name: 'veille',
+      component: Veille
+    },
+    {
+      path: '/merci',
+      name: 'merci',
+      component: Merci
     }
   ]
 })

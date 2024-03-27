@@ -1,6 +1,19 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Home from './views/Home.vue'
+import { onMounted } from 'vue'
+import { RouterView, useRouter } from 'vue-router'
+let timer = 300000 /*5min*/
+const router = useRouter()
+const resetTimer = () => {
+  setTimeout(() => {
+    router.replace('/')
+  }, timer)
+}
+onMounted(() => {
+  document.addEventListener('click', () => {
+    timer = 300000
+    resetTimer()
+  })
+})
 </script>
 
 <template>

@@ -58,7 +58,7 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
         v-else-if="item.type == 'button' && item.id == 'addperson'"
         :onclick="props.addperson"
       />
-      <InputText :input="item" v-else />
+      <InputText :input="item" v-else-if="item.type != 'button'" />
       <Button
         :text="item.label"
         v-if="item.type == 'button' && item.id == 'deleteperson'"

@@ -3,14 +3,21 @@ import { writeData } from '../firebase'
 import InputText from './InputText.vue'
 import InputCheckbox from './InputCheckbox.vue'
 import Button from './Button.vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const routeName = useRoute().name
+const router = useRouter()
+const writeFormData = async () => {
+  const form = document.querySelector('form#form')
+  const formData = new FormData(form)
 
+<<<<<<< HEAD
 const writeFormData = () => {
   const form = document.querySelector('form#form')
   const formData = new FormData(form)
 
+=======
+>>>>>>> 09aba93663a8cf7e5071badfe0c400ce3e690002
   let data = {}
   let persons = []
 
@@ -29,8 +36,11 @@ const writeFormData = () => {
     }
   }
 
-  writeData(routeName, data)
-  form.reset()
+  const result = await writeData(routeName, data)
+  if (result) {
+    form.reset()
+    router.replace('/merci')
+  }
 }
 
 const props = defineProps(['inputs', 'addperson', 'deleteperson'])
@@ -55,7 +65,7 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
         v-else-if="item.type == 'button' && item.id == 'addperson'"
         :onclick="props.addperson"
       />
-      <InputText :input="item" v-else />
+      <InputText :input="item" v-else-if="item.type != 'button'" />
       <Button
         :text="item.label"
         v-if="item.type == 'button' && item.id == 'deleteperson'"

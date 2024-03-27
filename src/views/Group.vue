@@ -12,7 +12,7 @@ const inputs = ref([
   },
   {
     label: 'Adresse mail',
-    type: 'mail',
+    type: 'email',
     name: 'mail',
     id: 'mail',
     placeholder: 'email@gmail.com'
@@ -43,8 +43,8 @@ const inputs = ref([
     label:
       'En pratiquant les activités sur la base nautique, vous nous permettez d’utiliser votre droit à l’image à des fins promotionnelles.',
     type: 'checkbox',
-    name: 'img-right',
-    id: 'img-right'
+    name: 'droit-image',
+    id: 'droit-image'
   }
 ])
 </script>
@@ -57,7 +57,7 @@ const inputs = ref([
     <section id="style-form">
       <div id="head">
         <h2>GROUPE</h2>
-        <RouterLink to="/">
+        <RouterLink to="/home">
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>

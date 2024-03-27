@@ -1,15 +1,11 @@
 // Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app'
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js'
-import {
-  getFirestore,
-  doc,
-  collection,
-  addDoc,
-  deleteDoc,
-  getDocs
-} from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js'
+import { getFirestore, doc, collection, addDoc, deleteDoc, getDocs } from 'firebase/firestore'
+// import { getFirestore, doc, collection, addDoc, deleteDoc, getDocs } from 'firebase/firestsore'
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: 'AIzaSyB4mlZOGA6dnHchdGBeiGnBrdN9scrR63A',
   authDomain: 'loeuilly-kayak.firebaseapp.com',
@@ -23,12 +19,35 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
-
+const auth = getAuth()
 // console.log(app);
 // console.log(db);
 
 let count = 0
-
+export const connect = (login, password) => {
+  let user = signInWithEmailAndPassword(auth, login, password)
+    .then((userCredentials) => {
+      let user = userCredentials.user
+      return user
+    })
+    .catch((error) => {
+      const errorCode = error.code
+      const errorMessage = error.message
+      console.log(errorCode, errorMessage)
+    })
+  return user
+}
+export const logout = () => {
+  signOut(auth)
+    .then(() => {
+      console.log('deconnecté')
+    })
+    .catch((error) => {
+      const errorCode = error.code
+      const errorMessage = error.message
+      console.log(errorCode, errorMessage)
+    })
+}
 // EXEMPLE DE CREATION DE COLLECTION
 // const collectionTest = doc(firestore, 'Test');
 
@@ -46,23 +65,23 @@ export const writeData = async (collection_name, docData) => {
 
 // EXEMPLE D'ECRITURE DE DATA
 
-// writeData('individuel', 'personne', {
+// writeData('individual', 'personne', {
 //   lastname: 'Boulant',
 //   firstname: 'Simon',
 //   email: 'developpeur@gmail.com'
 // })
-// writeData('individuel', 'presonne', {
+// writeData('individual', 'presonne', {
 //   lastname: 'Dulot',
 //   firstname: 'Philippe',
 //   email: 'fanDeChevaux@gmail.com'
 // })
-// writeData('famille', 'titulaire', {
+// writeData('family', 'titulaire', {
 //   lastname: 'Ferrero',
 //   firstname: 'Roger',
 //   email: 'LeChocolatMiam@gmail.com'
 // })
 
-// writeData('groupe', 'number-', {
+// writeData('group', 'number-', {
 //   titulaire: { lastname: 'Murdock', firstname: 'Matt', email: 'aveugle@gmail.com' },
 //   personne1: { lastname: 'Obispo', firstname: 'Pascal', email: 'chanteurDeFou@gmail.com' },
 //   personne2: { lastname: 'Loucheut', firstname: 'Zayaa', email: 'surfeur@gmail.com' }

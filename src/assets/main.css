@@ -297,3 +297,14 @@ main#dashboard {
   font-weight: 200;
   width: 400px;
 }
+
+main#dashboard div#cross {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+main#dashboard input {
+  width: 80%;
+  align-self: center;
+}

@@ -62,7 +62,7 @@ const inputs = ref([
   },
   {
     label: 'Adresse électronique (Pas obligatoire)',
-    type: 'mail',
+    type: 'email',
     name: 'mail',
     id: 'mail'
   },

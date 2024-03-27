@@ -12,7 +12,7 @@ const inputs = ref([
   },
   {
     label: 'Adresse mail',
-    type: 'mail',
+    type: 'email',
     name: 'mail',
     id: 'mail',
     placeholder: 'email@gmail.com'

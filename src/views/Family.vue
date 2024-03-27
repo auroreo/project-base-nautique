@@ -62,7 +62,7 @@ const inputs = ref([
   },
   {
     label: 'Adresse électronique (Pas obligatoire)',
-    type: 'mail',
+    type: 'email',
     name: 'mail',
     id: 'mail'
   },
@@ -76,8 +76,8 @@ const inputs = ref([
     label:
       'En pratiquant les activités sur la base nautique, vous nous permettez d’utiliser votre droit à l’image à des fins promotionnelles.',
     type: 'checkbox',
-    name: 'img-right',
-    id: 'img-right'
+    name: 'droit-image',
+    id: 'droit-image'
   },
   {
     label:

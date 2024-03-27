@@ -8,6 +8,7 @@ const props = defineProps(['input'])
     :name="props.input.name"
     :id="props.input.id"
     class="input-checkbox"
+    required
   />
   <label :for="props.input.name" class="label-checkbox"> {{ props.input.label }} </label>
 </template>

@@ -279,3 +279,32 @@ main.merci {
   text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
   font-size: 70px;
 }
+/* *********** BARRE DE RECHERCHE *********** */
+main#dashboard {
+  padding: 0 0 0;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+}
+
+/* *********** INFO BDD *********** */
+.title_h3 {
+  font-size: 20px;
+  background-color: #007bff;
+  display: flex;
+  padding: 15px;
+  border-radius: 3px;
+  font-weight: 200;
+  width: 400px;
+}
+
+main#dashboard div#cross {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+main#dashboard input {
+  width: 80%;
+  align-self: center;
+}

@@ -21,5 +21,6 @@ const props = defineProps(['input'])
     :id="props.input.id"
     class="input-text"
     :placeholder="props.input.placeholder"
+    :required="props.input.name !== 'mail'"
   />
 </template>

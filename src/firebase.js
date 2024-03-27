@@ -37,8 +37,8 @@ export const writeData = async (collection_name, docData) => {
   // docData, objet pour stocker les données
   try {
     // addDoc pour ajouter une donner
-    await addDoc(collection(db, collection_name), docData);
-    console.log('value inserted');
+    await addDoc(collection(db, collection_name), docData)
+    return true
   } catch (error) {
     console.log(error)
   }

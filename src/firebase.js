@@ -68,10 +68,23 @@ export const writeData = async (collection_name, docData) => {
 //   personne2: { lastname: 'Loucheut', firstname: 'Zayaa', email: 'surfeur@gmail.com' }
 // })
 
-export const deleteData = (collection_name, col_module) => {
+export const deleteData = () => {
   try {
-    const collection = doc(db, collection_name, col_module)
-    deleteDoc(collection, col_module)
+    readData('family').then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        deleteDoc(doc(db, 'family', data[i].id))
+      }
+    })
+    readData('group').then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        deleteDoc(doc(db, 'group', data[i].id))
+      }
+    })
+    readData('individual').then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        deleteDoc(doc(db, 'individual', data[i].id))
+      }
+    })
   } catch (error) {
     console.log(error)
   }
@@ -85,10 +98,12 @@ export const readData = async (collection_name) => {
     const colRef = collection(db, collection_name)
     const docSnap = await getDocs(colRef)
 
-    let arrayData = {}
+    let arrayData = []
     docSnap.forEach((doc) => {
+      let data = doc.data()
+      delete data.persons
+      arrayData.push({ id: doc.id, ...data })
       // doc.data() is never undefined for query doc snapshots
-      arrayData[doc.id] = doc.data()
     })
 
     if (arrayData) {

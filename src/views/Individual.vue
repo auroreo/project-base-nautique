@@ -10,19 +10,22 @@ const inputs = ref([
     label: 'Nom',
     type: 'text',
     name: 'lastname',
-    id: 'lastname'
+    id: 'lastname',
+    placeholder: 'Votre nom'
   },
   {
     label: 'Prénom',
     type: 'text',
     name: 'firstname',
-    id: 'firstname'
+    id: 'firstname',
+    placeholder: 'Votre prénom'
   },
   {
     label: 'Adresse mail',
     type: 'email',
     name: 'mail',
-    id: 'mail'
+    id: 'mail',
+    placeholder: 'Votre email'
   },
   {
     label:

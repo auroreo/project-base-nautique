@@ -4,21 +4,27 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <div>
+    <div class="head-title">
       <span>BASE NAUTIQUE DE LOEUILLY</span>
       <h1>NOS FORMULES</h1>
     </div>
     <nav>
       <RouterLink to="/individual">
-        <img src="../assets/img/illu-home-indiv.png" alt="" />
+        <div>
+          <img src="../assets/img/illu-home-indiv.png" alt="" />
+        </div>
         <h2>INDIVIDUEL</h2>
       </RouterLink>
       <RouterLink to="/family">
-        <img src="../assets/img/illu-home-family.png" alt="" />
+        <div>
+          <img src="../assets/img/illu-home-family.png" alt="" />
+        </div>
         <h2>FAMILLE</h2>
       </RouterLink>
       <RouterLink to="/group">
-        <img src="../assets/img/illu-home-group.png" alt="" />
+        <div>
+          <img src="../assets/img/illu-home-group.png" alt="" />
+        </div>
         <h2>GROUPE</h2>
       </RouterLink>
     </nav>

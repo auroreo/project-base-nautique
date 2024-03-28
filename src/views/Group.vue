@@ -34,7 +34,7 @@ const inputs = ref([
     id: 'newsletter'
   },
   {
-    label: 'J’atteste savoir nager 25 mètres et s’immerger.',
+    label: 'Atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'attestation',
     id: 'attestation'
@@ -61,9 +61,7 @@ const inputs = ref([
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>
-      <form action="">
-        <Form :inputs="inputs" />
-      </form>
+      <Form :inputs="inputs" />
     </section>
   </main>
 </template>

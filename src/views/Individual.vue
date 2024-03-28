@@ -59,9 +59,7 @@ const inputs = ref([
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>
-      <form action="">
-        <Form :inputs="inputs" />
-      </form>
+      <Form :inputs="inputs" />
     </section>
   </main>
 </template>

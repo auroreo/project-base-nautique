@@ -67,7 +67,7 @@ const inputs = ref([
     id: 'mail'
   },
   {
-    label: 'Savent nager 25 mètres et s’immerger.',
+    label: 'Atteste que les personnes ci-dessus savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'disclaimer',
     id: 'disclaimer'
@@ -101,9 +101,7 @@ const inputs = ref([
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>
-      <form action="">
-        <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
-      </form>
+      <Form :inputs="inputs" :addperson="addPersonn" :deleteperson="deletePerson" />
     </section>
   </main>
 </template>

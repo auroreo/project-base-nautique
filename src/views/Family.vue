@@ -33,20 +33,22 @@ const inputs = ref([
     label: 'Nom',
     type: 'text',
     name: 'lastname',
-    id: 'lastname'
+    id: 'lastname',
+    placeholder: 'Votre nom'
   },
   {
     label: 'Prénom',
     type: 'text',
     name: 'firstname',
-    id: 'firstname'
+    id: 'firstname',
+    placeholder: 'Votre prénom'
   },
   {
     label: 'Personne 1',
     type: 'text',
     name: 'person',
     id: 'person',
-    placeholder: 'Nom,Prénom'
+    placeholder: 'Nom, Prénom'
   },
   {
     label: 'Ajouter une personne',
@@ -64,7 +66,8 @@ const inputs = ref([
     label: 'Adresse électronique (Pas obligatoire)',
     type: 'email',
     name: 'mail',
-    id: 'mail'
+    id: 'mail',
+    placeholder: 'Votre mail'
   },
   {
     label: 'Atteste que les personnes ci-dessus savent nager 25 mètres et s’immerger.',

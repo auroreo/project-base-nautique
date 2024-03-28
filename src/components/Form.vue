@@ -11,13 +11,6 @@ const writeFormData = async () => {
   const form = document.querySelector('form#form')
   const formData = new FormData(form)
 
-<<<<<<< HEAD
-const writeFormData = () => {
-  const form = document.querySelector('form#form')
-  const formData = new FormData(form)
-
-=======
->>>>>>> 09aba93663a8cf7e5071badfe0c400ce3e690002
   let data = {}
   let persons = []
 

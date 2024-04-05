@@ -81,13 +81,6 @@ const inputs = ref([
     type: 'checkbox',
     name: 'droit-image',
     id: 'droit-image'
-  },
-  {
-    label:
-      'L’association Loeuilly kayak décline toutes responsabilité en cas de perte/vole de vos affaires personnelles.',
-    type: 'checkbox',
-    name: 'responsability',
-    id: 'responsability'
   }
 ])
 </script>

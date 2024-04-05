@@ -28,13 +28,6 @@ const inputs = ref([
     placeholder: 'Votre email'
   },
   {
-    label:
-      "En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.",
-    type: 'checkbox',
-    name: 'newsletter',
-    id: 'newsletter'
-  },
-  {
     label: 'J’atteste savoir nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'attestation',

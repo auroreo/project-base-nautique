@@ -66,6 +66,9 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
       />
       <span v-if="routeName === 'group' && item.id === 'resp'">responsable du groupe</span>
     </div>
+    <p>
+      En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.
+    </p>
     <p v-if="routeName != 'individual'">
       En remplissant ce document, vous renoncez à souscrire une assurance individuelle corporelle
       complémentaire de 8 euros. <br />

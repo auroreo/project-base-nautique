@@ -25,14 +25,6 @@ const inputs = ref([
     id: 'resp',
     placeholder: 'Mr, Mme'
   },
-
-  {
-    label:
-      "En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.",
-    type: 'checkbox',
-    name: 'newsletter',
-    id: 'newsletter'
-  },
   {
     label: 'Atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
     type: 'checkbox',

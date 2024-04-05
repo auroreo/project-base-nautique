@@ -72,8 +72,8 @@ const inputs = ref([
   {
     label: 'Atteste que les personnes ci-dessus savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
-    name: 'disclaimer',
-    id: 'disclaimer'
+    name: 'attestation',
+    id: 'attestation'
   },
   {
     label:

@@ -6,8 +6,8 @@ const inputs = ref([
   {
     label: 'Nom du groupe',
     type: 'text',
-    name: 'lastname',
-    id: 'lastname',
+    name: 'group-name',
+    id: 'group-name',
     placeholder: 'Les vachettes'
   },
   {

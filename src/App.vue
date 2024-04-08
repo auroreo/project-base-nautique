@@ -53,11 +53,3 @@ watch([firstTouch, secondTouch], ([newA, newB], [prevA, prevB]) => {
 <template>
   <RouterView />
 </template>
-
-<style scoped>
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>

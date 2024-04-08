@@ -6,8 +6,8 @@ const inputs = ref([
   {
     label: 'Nom du groupe',
     type: 'text',
-    name: 'lastname',
-    id: 'lastname',
+    name: 'group-name',
+    id: 'group-name',
     placeholder: 'Les vachettes'
   },
   {
@@ -25,16 +25,8 @@ const inputs = ref([
     id: 'resp',
     placeholder: 'Mr, Mme'
   },
-
   {
-    label:
-      "En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.",
-    type: 'checkbox',
-    name: 'newsletter',
-    id: 'newsletter'
-  },
-  {
-    label: 'J’atteste savoir nager 25 mètres et s’immerger.',
+    label: 'Atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'attestation',
     id: 'attestation'
@@ -61,9 +53,7 @@ const inputs = ref([
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>
-      <form action="">
-        <Form :inputs="inputs" />
-      </form>
+      <Form :inputs="inputs" />
     </section>
   </main>
 </template>

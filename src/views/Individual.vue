@@ -10,26 +10,22 @@ const inputs = ref([
     label: 'Nom',
     type: 'text',
     name: 'lastname',
-    id: 'lastname'
+    id: 'lastname',
+    placeholder: 'Votre nom'
   },
   {
     label: 'Prénom',
     type: 'text',
     name: 'firstname',
-    id: 'firstname'
+    id: 'firstname',
+    placeholder: 'Votre prénom'
   },
   {
     label: 'Adresse mail',
     type: 'email',
     name: 'mail',
-    id: 'mail'
-  },
-  {
-    label:
-      "En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.",
-    type: 'checkbox',
-    name: 'newsletter',
-    id: 'newsletter'
+    id: 'mail',
+    placeholder: 'Votre email'
   },
   {
     label: 'J’atteste savoir nager 25 mètres et s’immerger.',
@@ -59,9 +55,7 @@ const inputs = ref([
           <img src="../assets/img/cross-back.svg" alt="" />
         </RouterLink>
       </div>
-      <form action="">
-        <Form :inputs="inputs" />
-      </form>
+      <Form :inputs="inputs" />
     </section>
   </main>
 </template>

@@ -22,29 +22,23 @@
   font-family: 'Ananias Bold';
   src: url(../assets/fonts/Ananias-Bold.otf);
 }
-:root {
-  font-size: 10px;
+
 }
 #style-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1em;
-  height: 70vh;
-}
-
-#head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 80vh;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 10px;
   height: 70vh;
   overflow-y: scroll;
+  padding: 0 20px;
   scrollbar-width: thick;
 }
 form::-webkit-scrollbar-track {
@@ -73,16 +67,16 @@ form .type-text {
 
 form .type-checkbox {
   display: flex;
-  gap: 1em;
+  gap: 10px;
 }
 
 form .type-checkbox,
 p {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 div.resp span {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 ::placeholder {
@@ -113,7 +107,7 @@ section.resp-section {
 
 .input-text {
   padding: 0.5em;
-  font-size: 24px;
+  font-size: 2.4rem;
   border: solid 2px #03a6c4;
   border-radius: 6px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -122,7 +116,7 @@ section.resp-section {
 
 button {
   font-family: 'Now Black';
-  font-size: 32px;
+  font-size: 3.2rem;
   color: #03a6c4;
   padding: 0.5em;
   background-color: white;
@@ -144,6 +138,7 @@ button:active {
 
 /* ******* Accueil ******* */
 
+
 /* ****** BONNE NAVIGATION ****** */
 
 main.merci {
@@ -160,11 +155,12 @@ main.merci {
 
 .titre_merci {
   font-family: 'Gagalin';
-  font-size: 120px;
+  font-size: 12rem;
   font-weight: 100;
   color: #ffffff;
   text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
 }
+
 
 /* *********** BARRE DE RECHERCHE *********** */
 main#dashboard {
@@ -175,15 +171,6 @@ main#dashboard {
 }
 
 /* *********** INFO BDD *********** */
-.title_h3 {
-  font-size: 20px;
-  background-color: #007bff;
-  display: flex;
-  padding: 15px;
-  border-radius: 3px;
-  font-weight: 200;
-  width: 400px;
-}
 
 main#dashboard div#cross {
   position: absolute;
@@ -194,4 +181,12 @@ main#dashboard div#cross {
 main#dashboard input {
   width: 80%;
   align-self: center;
+}
+
+.illu {
+  width: 70%;
+}
+
+.illu img {
+  width: 100%;
 }

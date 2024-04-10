@@ -1,0 +1,43 @@
+/* Screen AFK */
+.full_screen_tl {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-img {
+  width: 80%;
+}
+.logo_pic_tl {
+  border: 1rem solid #75d0e0;
+  border-radius: 100%;
+  background-color: #03a6c4;
+  width: calc(100% - 2rem);
+  box-shadow: 0.4rem 0 10rem rgba(0, 0, 0, 0.5);
+}
+.titre_veille_tl {
+  font-weight: lighter;
+
+  font-family: 'gagalin';
+  color: white;
+  text-shadow: 0 0.4rem 0.4rem rgb(0, 0, 0, 0.25);
+  font-size: 7rem;
+  text-align: center;
+}
+
+@media screen and (orientation: landscape) {
+  .full_screen_tl {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-img {
+    width: 30%;
+  }
+  .titre_veille_tl {
+    font-size: 6rem;
+    width: 60%;
+  }
+}

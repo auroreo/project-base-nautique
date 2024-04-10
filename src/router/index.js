@@ -29,9 +29,9 @@ const router = createRouter({
       component: Family
     },
     {
-      path:'/veille',
-      name:'veille',
-      component: Veille   
+      path: '/veille',
+      name: 'veille',
+      component: Veille
     }
   ]
 })

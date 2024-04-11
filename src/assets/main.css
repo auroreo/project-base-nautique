@@ -31,13 +31,19 @@
   height: 80vh;
 }
 
+#head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   height: 70vh;
   overflow-y: scroll;
-  padding: 0 3em;
+  padding: 0 3rem;
   scrollbar-width: thick;
   color: white;
   font-family: 'Now Medium';
@@ -102,11 +108,6 @@ div.resp input {
   font-size: 1.2rem;
 }
 
-div.resp {
-  flex-direction: row;
-  align-items: center;
-}
-
 div.resp section input {
   width: 100%;
   margin-inline: 1vh;
@@ -116,10 +117,23 @@ section.resp-section {
   flex-direction: row;
 }
 
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+label {
+  color: white;
+}
+
 .label-text {
   font-family: 'Now Medium';
   font-size: 1.4rem;
   font-weight: smaller;
+  color: white;
 }
 
 .input-text {
@@ -156,7 +170,6 @@ button:active {
 
 /* ******* Accueil ******* */
 
-
 /* ****** BONNE NAVIGATION ****** */
 
 main.merci {
@@ -178,7 +191,6 @@ main.merci {
   color: #ffffff;
   text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
 }
-
 
 /* *********** BARRE DE RECHERCHE *********** */
 main#dashboard {
@@ -244,4 +256,47 @@ main#dashboard input {
 
 @media screen and (orientation: landscape) {
 
+}
+
+@media screen and (max-width: 768px) {
+  /* HOME */
+  div.head-title {
+    margin-top: 3rem;
+  }
+  div.head-title span {
+    font-size: 3rem;
+  }
+  div.head-title h1 {
+    font-size: 4vh;
+  }
+
+  #individual,
+  #group,
+  #family {
+    margin-inline: 1rem;
+  }
+  #head {
+    width: 80%;
+  }
+  #head h2 {
+    font-size: 7vh;
+  }
+  section.illu img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  section#style-form div#head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (orientation: landscape) {
+  #individual,
+  #group,
+  #family {
+    display: flex;
+    flex-direction: row;
+  }
 }

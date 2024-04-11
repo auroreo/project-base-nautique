@@ -3,14 +3,15 @@ const props = defineProps(['input'])
 </script>
 
 <template>
-  <div v-if="props.input.id != 'resp'">
+  <div>
     <label :for="props.input.name" class="label-text"> {{ props.input.label }} </label>
     <span
       class="red-required"
       v-if="
         props.input.label === 'Nom' ||
         props.input.label === 'Prénom' ||
-        props.input.label === 'Nom du groupe'
+        props.input.label === 'Nom du groupe' ||
+        props.input.label === 'Responsable'
       "
       >*</span
     >

@@ -86,7 +86,7 @@ const inputs = ref([
 </script>
 
 <template>
-  <main>
+  <main id="family">
     <section class="illu">
       <img src="../assets/img/illu_family.png" alt="" />
     </section>

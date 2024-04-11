@@ -9,19 +9,19 @@ import { RouterLink, RouterView } from 'vue-router'
       <h1>NOS FORMULES</h1>
     </div>
     <nav>
-      <RouterLink to="/individual">
+      <RouterLink class="choices" to="/individual">
         <div>
           <img src="../assets/img/illu-home-indiv.png" alt="" />
         </div>
         <h2>INDIVIDUEL</h2>
       </RouterLink>
-      <RouterLink to="/family">
+      <RouterLink class="choices" to="/family">
         <div>
           <img src="../assets/img/illu-home-family.png" alt="" />
         </div>
         <h2>FAMILLE</h2>
       </RouterLink>
-      <RouterLink to="/group">
+      <RouterLink class="choices" to="/group">
         <div>
           <img src="../assets/img/illu-home-group.png" alt="" />
         </div>

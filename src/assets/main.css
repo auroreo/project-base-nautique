@@ -75,15 +75,15 @@ form .type-checkbox {
   gap: 10px;
 }
 form .input-checkbox {
-  width: 30px;
+  width: 20px;
 }
 
 form .type-checkbox,
 p {
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 form p {
-  margin: 3svh 0 0 0;
+  margin: 1svh 0 0 0;
 }
 div.resp {
   margin: 2em 0;
@@ -93,8 +93,8 @@ div.resp span {
 }
 div.resp input {
   padding: 0.3em;
-  margin: 0 .4em;    
-  width: 25svw;
+  margin: 0.4em;    
+  width: 20svw;
 }
 ::placeholder {
   color: rgba(0, 0, 0, 0.327);
@@ -118,22 +118,22 @@ section.resp-section {
 
 .label-text {
   font-family: 'Now Medium';
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: smaller;
 }
 
 .input-text {
   padding: 0.5em;
-  font-size: 2.4rem;
+  font-size: 1.2rem;
   border: solid 2px #03a6c4;
   border-radius: 6px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  width: 60%;
+  width: 90%;
 }
 
 button {
   font-family: 'Now Black';
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   color: #03a6c4;
   margin-top: 2svh;
   padding: 0.5em;
@@ -151,7 +151,7 @@ button:active {
 
 .red-required {
   color: rgb(255, 36, 36);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /* ******* Accueil ******* */
@@ -173,7 +173,7 @@ main.merci {
 
 .titre_merci {
   font-family: 'Gagalin';
-  font-size: 8rem;
+  font-size: 3rem;
   font-weight: 100;
   color: #ffffff;
   text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
@@ -209,7 +209,7 @@ main#dashboard form div {
   padding: 5svh 0 0 0;
 }
 main#dashboard form button {
-  margin-top: 5svh;
+  margin-top: 4svh;
 }
 main#dashboard input {
   width: 80%;
@@ -218,18 +218,21 @@ main#dashboard input {
 
 #head h2 {
   padding-left: 3rem;
+  margin: 1svh 0;
   color: white;
+  font-size: 2rem;
 }
-#head a img {
+#head a img, #cross img {
   position: absolute;
-  right: 3em;
-  top: 3em;
+  right: 1em;
+  top: 1em;
+  width: 30px;
 }
 .label-text {
   color: white;
 }
 .illu {
-  margin: 5em;
+  margin: 2em;
   display: flex;
   justify-content: center;
   /* width: 40%; */
@@ -237,4 +240,8 @@ main#dashboard input {
 
 .illu img {
   height: 30svh;
+}
+
+@media screen and (orientation: landscape) {
+
 }

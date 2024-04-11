@@ -75,6 +75,9 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
       L’association Loeuilly kayak décline toute responsabilité en cas de perte/vol de vos affaires
       personnelles.
     </p>
+    <p>
+      <span class="red">*</span> champs de texte obligatoire
+    </p>
     <div>
       <Button type="submit" text="Valider" />
     </div>

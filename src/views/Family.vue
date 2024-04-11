@@ -13,6 +13,7 @@ const addPersonn = () => {
   count += 1
   let newPerson = {
     label: 'Personne ' + count,
+    placeholder: 'Nom, Prénom',
     type: 'text',
     name: 'person',
     id: 'person'
@@ -32,14 +33,14 @@ const inputs = ref([
   {
     label: 'Nom',
     type: 'text',
-    name: 'lastname',
+    name: 'nom',
     id: 'lastname',
     placeholder: 'Votre nom'
   },
   {
     label: 'Prénom',
     type: 'text',
-    name: 'firstname',
+    name: 'prénom',
     id: 'firstname',
     placeholder: 'Votre prénom'
   },
@@ -63,11 +64,11 @@ const inputs = ref([
     id: 'deleteperson'
   },
   {
-    label: 'Adresse électronique (Pas obligatoire)',
+    label: 'Adresse mail  ',
     type: 'email',
     name: 'mail',
     id: 'mail',
-    placeholder: 'Votre mail'
+    placeholder: 'Votre email'
   },
   {
     label: 'Atteste que les personnes ci-dessus savent nager 25 mètres et s’immerger.',
@@ -79,8 +80,8 @@ const inputs = ref([
     label:
       'En pratiquant les activités sur la base nautique, vous nous permettez d’utiliser votre droit à l’image à des fins promotionnelles.',
     type: 'checkbox',
-    name: 'droit-image',
-    id: 'droit-image'
+    name: 'droitImg',
+    id: 'droitImg'
   }
 ])
 </script>

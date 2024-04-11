@@ -56,7 +56,10 @@ export const writeData = async (collection_name, docData) => {
   // docData, objet pour stocker les données
   try {
     // addDoc pour ajouter une donner
-    await addDoc(collection(db, collection_name), docData)
+    await addDoc(collection(db, collection_name), {
+      date: Intl.DateTimeFormat('fr-FR').format(new Date()),
+      ...docData
+  })
     return true
   } catch (error) {
     console.log(error)
@@ -90,6 +93,7 @@ export const writeData = async (collection_name, docData) => {
 export const deleteData = () => {
   try {
     readData('family').then((data) => {
+      console.log(data);
       for (let i = 0; i < data.length; i++) {
         deleteDoc(doc(db, 'family', data[i].id))
       }
@@ -121,7 +125,17 @@ export const readData = async (collection_name) => {
     docSnap.forEach((doc) => {
       let data = doc.data()
       delete data.persons
-      arrayData.push({ id: doc.id, ...data })
+      arrayData.push({ 
+        id: doc.id,
+        prenom: data.prénom ?? '/',
+        nom: data.nom ?? '/',
+        nom_du_groupe: data.nom_du_groupe ?? '/',
+        responsable: data.responsable ?? '/',
+        mail: data.mail ?? '/',
+        droit_image: data.droitImg,
+        attestation: data.attestation,
+        date: data.date,
+      })
       // doc.data() is never undefined for query doc snapshots
     })
 

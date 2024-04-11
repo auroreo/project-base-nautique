@@ -9,14 +9,14 @@ const inputs = ref([
   {
     label: 'Nom',
     type: 'text',
-    name: 'lastname',
+    name: 'nom',
     id: 'lastname',
     placeholder: 'Votre nom'
   },
   {
     label: 'Prénom',
     type: 'text',
-    name: 'firstname',
+    name: 'prénom',
     id: 'firstname',
     placeholder: 'Votre prénom'
   },
@@ -37,8 +37,8 @@ const inputs = ref([
     label:
       'En pratiquant les activités sur la base nautique, vous nous permettez d’utiliser votre droit à l’image à des fins promotionnelles.',
     type: 'checkbox',
-    name: 'droit-image',
-    id: 'droit-image'
+    name: 'droitImg',
+    id: 'droitImg'
   }
 ])
 </script>

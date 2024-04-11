@@ -91,17 +91,6 @@ p {
 form p {
   margin: 1svh 0 0 0;
 }
-div.resp {
-  margin: 2em 0;
-}
-div.resp span {
-  font-size: 1.4rem;
-}
-div.resp input {
-  padding: 0.3em;
-  margin: 0.4em;    
-  width: 20svw;
-}
 ::placeholder {
   color: rgba(0, 0, 0, 0.327);
   font-family: 'Now regular';
@@ -163,9 +152,9 @@ button:active {
   margin-bottom: 4px;
 }
 
-.red-required {
+.red-required, .red {
   color: rgb(255, 36, 36);
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 /* ******* Accueil ******* */
@@ -200,6 +189,16 @@ main#dashboard {
   width: 100%;
 }
 
+main#dashboard div.export {
+  display: flex;
+  height: 100svh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+main#dashboard div.export button {
+  width: 80%;
+}
 /* *********** INFO BDD *********** */
 
 main#dashboard div#cross {
@@ -269,12 +268,6 @@ main#dashboard input {
   div.head-title h1 {
     font-size: 4vh;
   }
-
-  #individual,
-  #group,
-  #family {
-    margin-inline: 1rem;
-  }
   #head {
     width: 80%;
   }
@@ -282,9 +275,10 @@ main#dashboard input {
     font-size: 7vh;
   }
   section.illu img {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     z-index: -1;
-    opacity: 0.1;
+    opacity: 0.1; */
   }
   section#style-form div#head {
     display: flex;

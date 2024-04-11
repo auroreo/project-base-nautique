@@ -6,23 +6,23 @@ const inputs = ref([
   {
     label: 'Nom du groupe',
     type: 'text',
-    name: 'group-name',
-    id: 'group-name',
+    name: 'nom_du_groupe',
+    id: 'group_name',
     placeholder: 'Les vachettes'
+  },
+  {
+    label: 'Responsable',
+    type: 'text',
+    name: 'responsable',
+    id: 'resp',
+    placeholder: 'Mr, Mme'
   },
   {
     label: 'Adresse mail',
     type: 'email',
     name: 'mail',
     id: 'mail',
-    placeholder: 'email@gmail.com'
-  },
-  {
-    label: 'Responsable',
-    type: 'text',
-    name: 'resp',
-    id: 'resp',
-    placeholder: 'Mr, Mme'
+    placeholder: 'votre email'
   },
   {
     label: 'J\'atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
@@ -34,8 +34,8 @@ const inputs = ref([
     label:
       'En pratiquant les activités sur la base nautique, vous nous permettez d’utiliser votre droit à l’image à des fins promotionnelles.',
     type: 'checkbox',
-    name: 'droit-image',
-    id: 'droit-image'
+    name: 'droitImg',
+    id: 'droitImg'
   }
 ])
 </script>

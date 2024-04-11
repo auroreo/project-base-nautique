@@ -263,10 +263,11 @@ main#dashboard input {
     margin-top: 3rem;
   }
   div.head-title span {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   div.head-title h1 {
-    font-size: 4vh;
+    margin: 5svh 0 0 0 ;
+    font-size: 1.8rem;
   }
   #head {
     width: 80%;
@@ -274,11 +275,11 @@ main#dashboard input {
   #head h2 {
     font-size: 7vh;
   }
-  section.illu img {
+  section#style-form {
+    margin-top: 3rem;
+  }
+  section.illu {
     display: none;
-    /* position: absolute;
-    z-index: -1;
-    opacity: 0.1; */
   }
   section#style-form div#head {
     display: flex;

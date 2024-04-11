@@ -28,16 +28,36 @@
 
 @media screen and (orientation: landscape) {
   .full_screen_tl {
+    margin-top: 0;
     width: 100%;
     flex-direction: row;
     justify-content: center;
   }
-
   .container-img {
     width: 30%;
   }
   .titre_veille_tl {
-    font-size: 6rem;
+    font-size: 4rem;
     width: 60%;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.full_screen_tl {
+    margin-bottom: 0;
+  }
+  div.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+  img.logo_pic_tl {
+    width: 70%;
+  }
+  h1.titre_veille_tl {
+    font-size: 5rem;
+    margin-block: 1.5rem;
   }
 }

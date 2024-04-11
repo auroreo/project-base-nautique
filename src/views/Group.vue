@@ -18,15 +18,14 @@ const inputs = ref([
     placeholder: 'email@gmail.com'
   },
   {
-    label: 'Je, soussigné ',
-    label2: 'responsable du groupe,',
+    label: 'Responsable',
     type: 'text',
     name: 'resp',
     id: 'resp',
     placeholder: 'Mr, Mme'
   },
   {
-    label: 'Atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
+    label: 'J\'atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'attestation',
     id: 'attestation'
@@ -42,7 +41,7 @@ const inputs = ref([
 </script>
 
 <template>
-  <main>
+  <main id="group">
     <section class="illu">
       <img src="../assets/img/illu-grp.png" alt="" />
     </section>

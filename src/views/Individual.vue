@@ -44,7 +44,7 @@ const inputs = ref([
 </script>
 
 <template>
-  <main>
+  <main id="individual">
     <section class="illu">
       <img src="../assets/img/illu-indiv.png" alt="" />
     </section>

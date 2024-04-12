@@ -2,6 +2,7 @@ import './assets/layout.css'
 import './assets/main.css'
 import './assets/veille.css'
 import './assets/home.css'
+import './assets/dash.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'

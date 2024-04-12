@@ -1,0 +1,28 @@
+main#dashboard form button.eye-pass {
+  margin-top: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 10%;
+  height: 100%;
+}
+main#dashboard form button.eye-pass:active {
+  margin-bottom: 0;
+}
+main#dashboard form div.div-pass {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+
+main#dashboard form div.div-pass input {
+  align-self: center;
+}

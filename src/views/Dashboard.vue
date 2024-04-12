@@ -1,5 +1,14 @@
 <script setup>
-import { onBeforeMount, onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'
+import {
+  onBeforeMount,
+  onMounted,
+  onUnmounted,
+  onUpdated,
+  ref,
+  render,
+  watch,
+  watchEffect
+} from 'vue'
 import { deleteData, readData, connect, logout } from '../firebase.js'
 import Button from '@/components/Button.vue'
 import exportFromJSON from 'export-from-json'
@@ -7,6 +16,8 @@ import InputText from '@/components/InputText.vue'
 import { RouterLink } from 'vue-router'
 let allData = []
 const logged = ref(false)
+const isShow = ref(false)
+
 const logUser = async () => {
   let login = document.querySelector('#login').value
   let password = document.querySelector('#password').value
@@ -35,6 +46,7 @@ const read = () => {
     allData.push(data)
   })
 }
+
 const exportArray = (data) => {
   let today = new Date()
   let year = today.getFullYear()
@@ -45,7 +57,10 @@ const exportArray = (data) => {
   exportFromJSON({ data, fileName, exportType })
   deleteData()
 }
-let inputs = [
+const changeIsShow = () => {
+  isShow.value = !isShow.value
+}
+let inputs = ref([
   {
     name: 'login',
     type: 'email',
@@ -55,12 +70,17 @@ let inputs = [
   },
   {
     name: 'password',
-    type: 'password',
+    type: isShow.value ? 'text' : 'password',
     id: 'password',
     label: 'Mot de passe',
-    placeholder: 'ex: 1234'
+    placeholder: 'ex: 1234',
+    isShow: isShow.value,
+    onClick: () => changeIsShow()
   }
-]
+])
+watch(isShow, (newVal) => {
+  inputs.value[1].type = newVal ? 'text' : 'password'
+})
 </script>
 
 <template>

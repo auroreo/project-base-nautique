@@ -6,27 +6,26 @@ const inputs = ref([
   {
     label: 'Nom du groupe',
     type: 'text',
-    name: 'group-name',
-    id: 'group-name',
+    name: 'nom_du_groupe',
+    id: 'group_name',
     placeholder: 'Les vachettes'
+  },
+  {
+    label: 'Responsable',
+    type: 'text',
+    name: 'responsable',
+    id: 'resp',
+    placeholder: 'Mr, Mme'
   },
   {
     label: 'Adresse mail',
     type: 'email',
     name: 'mail',
     id: 'mail',
-    placeholder: 'email@gmail.com'
+    placeholder: 'votre email'
   },
   {
-    label: 'Je, soussigné ',
-    label2: 'responsable du groupe,',
-    type: 'text',
-    name: 'resp',
-    id: 'resp',
-    placeholder: 'Mr, Mme'
-  },
-  {
-    label: 'Atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
+    label: 'J\'atteste que toutes les personnes du groupes savent nager 25 mètres et s’immerger.',
     type: 'checkbox',
     name: 'attestation',
     id: 'attestation'
@@ -35,14 +34,14 @@ const inputs = ref([
     label:
       'En pratiquant les activités sur la base nautique, vous nous permettez d’utiliser votre droit à l’image à des fins promotionnelles.',
     type: 'checkbox',
-    name: 'droit-image',
-    id: 'droit-image'
+    name: 'droitImg',
+    id: 'droitImg'
   }
 ])
 </script>
 
 <template>
-  <main>
+  <main id="group">
     <section class="illu">
       <img src="../assets/img/illu-grp.png" alt="" />
     </section>

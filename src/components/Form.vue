@@ -49,10 +49,7 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
         item.id == 'resp' && 'resp'
       ]"
     >
-      <span v-if="routeName === 'group' && item.id === 'resp'"
-        >Je soussigné(e)<span class="red-required">*</span></span
-      >
-      <InputCheckbox :input="item" v-if="item.type == 'checkbox'" />
+      <InputCheckbox :input="item" v-if="item.type == 'checkbox'"/>
       <Button
         :text="item.label"
         v-else-if="item.type == 'button' && item.id == 'addperson'"
@@ -64,10 +61,10 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
         v-if="item.type == 'button' && item.id == 'deleteperson'"
         :onclick="props.deleteperson"
       />
-      <span v-if="routeName === 'group' && item.id === 'resp'">responsable du groupe</span>
     </div>
     <p>
-      En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la newsletter.
+      En renseignant mon adresse mail, j'accepte que celle-ci soit utilisée dans le cadre de la
+      newsletter.
     </p>
     <p v-if="routeName != 'individual'">
       En remplissant ce document, vous renoncez à souscrire une assurance individuelle corporelle
@@ -77,6 +74,9 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
     <p>
       L’association Loeuilly kayak décline toute responsabilité en cas de perte/vol de vos affaires
       personnelles.
+    </p>
+    <p>
+      <span class="red">*</span> champs de texte obligatoire
     </p>
     <div>
       <Button type="submit" text="Valider" />

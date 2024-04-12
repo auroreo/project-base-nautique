@@ -71,7 +71,7 @@ let inputs = [
         <Button text="Se connecter" type="submit" />
       </form>
     </div>
-    <div v-else>
+    <div class="export" v-else>
       <Button
         text="Exporter et supprimer les données"
         type="button"

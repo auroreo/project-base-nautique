@@ -76,7 +76,7 @@ const props = defineProps(['inputs', 'addperson', 'deleteperson'])
       personnelles.
     </p>
     <p>
-      <span class="red">*</span> champs de texte obligatoire
+      <span class="red">*</span> champs de texte obligatoires
     </p>
     <div>
       <Button type="submit" text="Valider" />

@@ -73,3 +73,9 @@ header nav a {
     padding: 0 1rem 0 0;
   }
 }
+
+@media screen and (max-width: 800) {
+  header nav div {
+    display: none;
+  }
+}
